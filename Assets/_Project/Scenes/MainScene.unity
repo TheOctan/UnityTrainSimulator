@@ -456,6 +456,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5756290203025925652, guid: 89978fb6e10bf6e4eabe2b5c475a5ecd, type: 3}
   m_PrefabInstance: {fileID: 4455035312026910148}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &733111409 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6827060836020427243, guid: 89978fb6e10bf6e4eabe2b5c475a5ecd, type: 3}
+  m_PrefabInstance: {fileID: 4455035312026910148}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f536902633b69642ac207123e01eba1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &804864405
 GameObject:
   m_ObjectHideFlags: 0
@@ -938,11 +949,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5990472720382392046, guid: 89978fb6e10bf6e4eabe2b5c475a5ecd, type: 3}
       propertyPath: m_ConnectedAnchor.x
-      value: 4.032
+      value: 4.572
       objectReference: {fileID: 0}
     - target: {fileID: 5990472720382392046, guid: 89978fb6e10bf6e4eabe2b5c475a5ecd, type: 3}
       propertyPath: m_ConnectedAnchor.y
-      value: -2.843
+      value: -1.4829999
       objectReference: {fileID: 0}
     - target: {fileID: 6680686397204949560, guid: 89978fb6e10bf6e4eabe2b5c475a5ecd, type: 3}
       propertyPath: m_Name
@@ -969,6 +980,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 684832568}
     m_Modifications:
+    - target: {fileID: 2521297661686169905, guid: 1a9d030de0ee0d543be1f3fa9357169b, type: 3}
+      propertyPath: _trainRider
+      value: 
+      objectReference: {fileID: 733111409}
     - target: {fileID: 3715698811627662413, guid: 1a9d030de0ee0d543be1f3fa9357169b, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

@@ -48,10 +48,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f536902633b69642ac207123e01eba1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 0
-  _maxSpeed: 0
-  _acceleration: 0
-  _wheels: []
+  _startRotationSpeed: 100
+  _maxRotationSpeed: 0
+  _acceleration: 10
+  _invertRotation: 1
+  _wheels:
+  - {fileID: 4467360280494014747}
+  - {fileID: 6645607586963752042}
+  - {fileID: 1375364394968011097}
+  - {fileID: 8273383833628136488}
 --- !u!50 &2793678881701187309
 Rigidbody2D:
   serializedVersion: 4
@@ -414,6 +419,16 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6314650853065250013, guid: 8ce8eed2b1eb6f546ba4f9f84cd94e40, type: 3}
   m_PrefabInstance: {fileID: 6854307308564525717}
   m_PrefabAsset: {fileID: 0}
+--- !u!235 &1375364394968011097 stripped
+WheelJoint2D:
+  m_CorrespondingSourceObject: {fileID: 5478948419828704204, guid: 8ce8eed2b1eb6f546ba4f9f84cd94e40, type: 3}
+  m_PrefabInstance: {fileID: 6854307308564525717}
+  m_PrefabAsset: {fileID: 0}
+--- !u!235 &8273383833628136488 stripped
+WheelJoint2D:
+  m_CorrespondingSourceObject: {fileID: 3301018599992813245, guid: 8ce8eed2b1eb6f546ba4f9f84cd94e40, type: 3}
+  m_PrefabInstance: {fileID: 6854307308564525717}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8211858785646076631
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -482,5 +497,15 @@ PrefabInstance:
 --- !u!4 &2761911018812126730 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6314650853065250013, guid: 8ce8eed2b1eb6f546ba4f9f84cd94e40, type: 3}
+  m_PrefabInstance: {fileID: 8211858785646076631}
+  m_PrefabAsset: {fileID: 0}
+--- !u!235 &4467360280494014747 stripped
+WheelJoint2D:
+  m_CorrespondingSourceObject: {fileID: 5478948419828704204, guid: 8ce8eed2b1eb6f546ba4f9f84cd94e40, type: 3}
+  m_PrefabInstance: {fileID: 8211858785646076631}
+  m_PrefabAsset: {fileID: 0}
+--- !u!235 &6645607586963752042 stripped
+WheelJoint2D:
+  m_CorrespondingSourceObject: {fileID: 3301018599992813245, guid: 8ce8eed2b1eb6f546ba4f9f84cd94e40, type: 3}
   m_PrefabInstance: {fileID: 8211858785646076631}
   m_PrefabAsset: {fileID: 0}

@@ -1,11 +1,10 @@
-using System;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace OctanGames.UI
 {
     public class MainScreen : MonoBehaviour
     {
+        [SerializeField] private TrainRider _trainRider;
         [SerializeField] private ButtonHandler _runButton;
 
         private void Start()
@@ -22,11 +21,11 @@ namespace OctanGames.UI
 
         private void OnButtonPressed()
         {
-            
+            _trainRider.StartMovement();
         }
         private void OnButtonReleased()
         {
-            
+            _trainRider.StopMovement();
         }
     }
 }
