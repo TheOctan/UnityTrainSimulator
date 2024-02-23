@@ -48,6 +48,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f536902633b69642ac207123e01eba1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _speed: 0
+  _maxSpeed: 0
+  _acceleration: 0
+  _wheels: []
 --- !u!50 &2793678881701187309
 Rigidbody2D:
   serializedVersion: 4
@@ -346,11 +350,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2509645452007543865, guid: 8ce8eed2b1eb6f546ba4f9f84cd94e40, type: 3}
       propertyPath: m_ConnectedAnchor.x
-      value: -4.698977
+      value: -4.67
       objectReference: {fileID: 0}
     - target: {fileID: 2509645452007543865, guid: 8ce8eed2b1eb6f546ba4f9f84cd94e40, type: 3}
       propertyPath: m_ConnectedAnchor.y
-      value: -1.8562986
+      value: -1.483
       objectReference: {fileID: 0}
     - target: {fileID: 2509645452007543865, guid: 8ce8eed2b1eb6f546ba4f9f84cd94e40, type: 3}
       propertyPath: m_ConnectedRigidBody
@@ -419,12 +423,8 @@ PrefabInstance:
     m_TransformParent: {fileID: 5756290203025925652}
     m_Modifications:
     - target: {fileID: 2509645452007543865, guid: 8ce8eed2b1eb6f546ba4f9f84cd94e40, type: 3}
-      propertyPath: m_ConnectedAnchor.x
-      value: 4.543023
-      objectReference: {fileID: 0}
-    - target: {fileID: 2509645452007543865, guid: 8ce8eed2b1eb6f546ba4f9f84cd94e40, type: 3}
       propertyPath: m_ConnectedAnchor.y
-      value: -1.8562986
+      value: -1.483
       objectReference: {fileID: 0}
     - target: {fileID: 2509645452007543865, guid: 8ce8eed2b1eb6f546ba4f9f84cd94e40, type: 3}
       propertyPath: m_ConnectedRigidBody

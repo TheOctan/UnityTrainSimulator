@@ -936,9 +936,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5990472720382392046, guid: 89978fb6e10bf6e4eabe2b5c475a5ecd, type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: 4.032
+      objectReference: {fileID: 0}
+    - target: {fileID: 5990472720382392046, guid: 89978fb6e10bf6e4eabe2b5c475a5ecd, type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: -2.843
+      objectReference: {fileID: 0}
     - target: {fileID: 6680686397204949560, guid: 89978fb6e10bf6e4eabe2b5c475a5ecd, type: 3}
       propertyPath: m_Name
       value: Train
+      objectReference: {fileID: 0}
+    - target: {fileID: 9064454207944238764, guid: 89978fb6e10bf6e4eabe2b5c475a5ecd, type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: -4.67
+      objectReference: {fileID: 0}
+    - target: {fileID: 9064454207944238764, guid: 89978fb6e10bf6e4eabe2b5c475a5ecd, type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: -1.4829999
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
