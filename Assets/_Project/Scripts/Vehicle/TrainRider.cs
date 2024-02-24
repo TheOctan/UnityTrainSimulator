@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace OctanGames
+namespace OctanGames.Vehicle
 {
     public class TrainRider : MonoBehaviour
     {
