@@ -10,6 +10,7 @@ namespace OctanGames.Background
         [SerializeField] private GameObject[] _layers;
 
         private Vector2 _screenBounds;
+        private Vector3 _lastCameraPosition;
 
         private void Start()
         {
@@ -20,14 +21,26 @@ namespace OctanGames.Background
             {
                 LoadChildObjects(layer);
             }
+
+            _lastCameraPosition = _viewCamera.transform.position;
         }
 
         private void LateUpdate()
         {
+            Vector3 cameraPosition = _viewCamera.transform.position;
+
             foreach (GameObject layer in _layers)
             {
                 MoveChildObjects(layer);
+
+                float parallaxSpeed = 1 - Mathf.Clamp01(Mathf.Abs(
+                    cameraPosition.z / layer.transform.position.z));
+
+                Vector3 deltaMovement = cameraPosition - _lastCameraPosition;
+                layer.transform.Translate(deltaMovement.x * parallaxSpeed * Vector3.right);
             }
+
+            _lastCameraPosition = cameraPosition;
         }
 
         private void LoadChildObjects(GameObject parent)
