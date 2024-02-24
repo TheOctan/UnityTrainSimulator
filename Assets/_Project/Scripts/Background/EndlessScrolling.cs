@@ -4,6 +4,8 @@ namespace OctanGames.Background
 {
     public class EndlessScrolling : MonoBehaviour
     {
+        private const float BORDER = 2f;
+
         [SerializeField] private Camera _viewCamera;
         [SerializeField] private GameObject[] _layers;
 
@@ -56,14 +58,14 @@ namespace OctanGames.Background
                 float halfObjectWidth = lastChild.GetComponent<SpriteRenderer>().bounds.extents.x;
 
                 Vector3 cameraPosition = _viewCamera.transform.position;
-                if (cameraPosition.x + _screenBounds.x > lastChild.transform.position.x + halfObjectWidth)
+                if (cameraPosition.x + _screenBounds.x > lastChild.transform.position.x + halfObjectWidth - BORDER)
                 {
                     firstChild.transform.SetAsLastSibling();
                     firstChild.transform.position = new Vector3(lastChild.transform.position.x + halfObjectWidth * 2,
                         lastChild.transform.position.y,
                         lastChild.transform.position.z);
                 }
-                else if (cameraPosition.x - _screenBounds.x < firstChild.transform.position.x - halfObjectWidth)
+                else if (cameraPosition.x - _screenBounds.x < firstChild.transform.position.x - halfObjectWidth + BORDER)
                 {
                     lastChild.transform.SetAsFirstSibling();
                     lastChild.transform.position = new Vector3(firstChild.transform.position.x - halfObjectWidth * 2,

@@ -23,6 +23,9 @@ namespace OctanGames.Vehicle
             if (_movementStarted)
             {
                 _currentRotationSpeed += Acceleration;
+                _currentRotationSpeed = _invertRotation
+                    ? Mathf.Max(-_maxRotationSpeed, _currentRotationSpeed)
+                    : Mathf.Min(_maxRotationSpeed, _currentRotationSpeed);
             }
             else
             {

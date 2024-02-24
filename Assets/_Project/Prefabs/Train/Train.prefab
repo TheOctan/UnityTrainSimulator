@@ -49,7 +49,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _startRotationSpeed: 100
-  _maxRotationSpeed: 0
+  _maxRotationSpeed: 4000
   _acceleration: 10
   _invertRotation: 1
   _wheels:
