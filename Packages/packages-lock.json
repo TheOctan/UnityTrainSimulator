@@ -1,5 +1,12 @@
 {
   "dependencies": {
+    "com.chenpipi.project-pin-board": {
+      "version": "https://github.com/ichenpipi/unity-project-pin-board.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "2ecf5f15398dcd085ebf8cb1131b973da3277559"
+    },
     "com.unity.2d.animation": {
       "version": "9.1.0",
       "depth": 1,
@@ -111,6 +118,15 @@
       "dependencies": {
         "com.unity.mathematics": "1.2.1",
         "com.unity.modules.jsonserialize": "1.0.0"
+      },
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.cinemachine": {
+      "version": "2.9.7",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.test-framework": "1.1.31"
       },
       "url": "https://packages.unity.com"
     },
