@@ -12,12 +12,38 @@ namespace OctanGames.Background
         private Vector2 _screenBounds;
         private Vector3 _lastCameraPosition;
         private GameObject[] _donorLayers;
+        private float[] _parallaxSpeedForLayer;
 
         private void Start()
         {
-            _screenBounds = _viewCamera.ScreenToWorldPoint(
-                new Vector3(Screen.width, Screen.height, _viewCamera.transform.position.z));
+            Vector3 cameraPosition = _viewCamera.transform.position;
 
+            _screenBounds = _viewCamera
+                .ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, cameraPosition.z));
+            _lastCameraPosition = cameraPosition;
+
+            CalculateBackground();
+            CalculateParallaxSpeed();
+        }
+
+        private void LateUpdate()
+        {
+            Vector3 cameraPosition = _viewCamera.transform.position;
+            Vector3 deltaMovement = cameraPosition - _lastCameraPosition;
+
+            for (var i = 0; i < _donorLayers.Length; i++)
+            {
+                GameObject layer = _donorLayers[i];
+                MoveChildObjects(layer);
+
+                layer.transform.position += deltaMovement.x * _parallaxSpeedForLayer[i] * Vector3.right;
+            }
+
+            _lastCameraPosition = cameraPosition;
+        }
+
+        private void CalculateBackground()
+        {
             _donorLayers = new GameObject[_layers.Length];
             for (var i = 0; i < _layers.Length; i++)
             {
@@ -29,26 +55,18 @@ namespace OctanGames.Background
 
                 LoadChildObjects(_layers[i], _donorLayers[i]);
             }
-
-            _lastCameraPosition = _viewCamera.transform.position;
         }
 
-        private void LateUpdate()
+        private void CalculateParallaxSpeed()
         {
+            _parallaxSpeedForLayer = new float[_donorLayers.Length];
+
             Vector3 cameraPosition = _viewCamera.transform.position;
-
-            foreach (GameObject layer in _donorLayers)
+            for (var i = 0; i < _donorLayers.Length; i++)
             {
-                MoveChildObjects(layer);
-
-                float parallaxSpeed = 1 - Mathf.Clamp01(Mathf.Abs(
-                    cameraPosition.z / layer.transform.position.z));
-
-                Vector3 deltaMovement = cameraPosition - _lastCameraPosition;
-                layer.transform.Translate(deltaMovement.x * parallaxSpeed * Vector3.right);
+                Vector3 layerPosition = _donorLayers[i].transform.position;
+                _parallaxSpeedForLayer[i] = 1 - Mathf.Clamp01(Mathf.Abs(cameraPosition.z / layerPosition.z));
             }
-
-            _lastCameraPosition = cameraPosition;
         }
 
         private void LoadChildObjects(GameObject original, GameObject parent)
