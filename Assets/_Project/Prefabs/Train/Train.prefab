@@ -11,6 +11,10 @@ GameObject:
   - component: {fileID: 5756290203025925652}
   - component: {fileID: 6827060836020427243}
   - component: {fileID: 2793678881701187309}
+  - component: {fileID: 6806737008730004959}
+  - component: {fileID: 8906321711733789333}
+  - component: {fileID: 3626821841072672947}
+  - component: {fileID: 2964320778730922494}
   m_Layer: 0
   m_Name: Train
   m_TagString: Untagged
@@ -53,10 +57,10 @@ MonoBehaviour:
   _acceleration: 10
   _invertRotation: 1
   _wheels:
-  - {fileID: 4467360280494014747}
-  - {fileID: 6645607586963752042}
-  - {fileID: 1375364394968011097}
-  - {fileID: 8273383833628136488}
+  - {fileID: 6806737008730004959}
+  - {fileID: 8906321711733789333}
+  - {fileID: 3626821841072672947}
+  - {fileID: 2964320778730922494}
 --- !u!50 &2793678881701187309
 Rigidbody2D:
   serializedVersion: 4
@@ -69,7 +73,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 100
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -84,6 +88,106 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!235 &6806737008730004959
+WheelJoint2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6680686397204949560}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_EnableCollision: 0
+  m_ConnectedRigidBody: {fileID: 5501549435474082421}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_BreakAction: 3
+  m_AutoConfigureConnectedAnchor: 0
+  m_Anchor: {x: -5.91, y: -2.15}
+  m_ConnectedAnchor: {x: 0, y: 0}
+  m_Suspension:
+    m_DampingRatio: 0.7
+    m_Frequency: 20
+    m_Angle: 90
+  m_UseMotor: 0
+  m_Motor:
+    m_MotorSpeed: 0
+    m_MaximumMotorForce: 10000
+--- !u!235 &8906321711733789333
+WheelJoint2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6680686397204949560}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_EnableCollision: 0
+  m_ConnectedRigidBody: {fileID: 6374124902019140340}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_BreakAction: 3
+  m_AutoConfigureConnectedAnchor: 0
+  m_Anchor: {x: -3.46, y: -2.15}
+  m_ConnectedAnchor: {x: 0, y: 0}
+  m_Suspension:
+    m_DampingRatio: 0.7
+    m_Frequency: 20
+    m_Angle: 90
+  m_UseMotor: 0
+  m_Motor:
+    m_MotorSpeed: 0
+    m_MaximumMotorForce: 10000
+--- !u!235 &3626821841072672947
+WheelJoint2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6680686397204949560}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_EnableCollision: 0
+  m_ConnectedRigidBody: {fileID: 7111298371212421687}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_BreakAction: 3
+  m_AutoConfigureConnectedAnchor: 0
+  m_Anchor: {x: 3.33, y: -2.15}
+  m_ConnectedAnchor: {x: 0, y: 0}
+  m_Suspension:
+    m_DampingRatio: 0.7
+    m_Frequency: 20
+    m_Angle: 90
+  m_UseMotor: 0
+  m_Motor:
+    m_MotorSpeed: 0
+    m_MaximumMotorForce: 10000
+--- !u!235 &2964320778730922494
+WheelJoint2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6680686397204949560}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_EnableCollision: 0
+  m_ConnectedRigidBody: {fileID: 8546836980880792246}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_BreakAction: 3
+  m_AutoConfigureConnectedAnchor: 0
+  m_Anchor: {x: 5.782, y: -2.15}
+  m_ConnectedAnchor: {x: 0, y: 0}
+  m_Suspension:
+    m_DampingRatio: 0.7
+    m_Frequency: 20
+    m_Angle: 90
+  m_UseMotor: 0
+  m_Motor:
+    m_MotorSpeed: 0
+    m_MaximumMotorForce: 10000
 --- !u!1 &8048582897342252772
 GameObject:
   m_ObjectHideFlags: 0
@@ -353,18 +457,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5756290203025925652}
     m_Modifications:
-    - target: {fileID: 2509645452007543865, guid: 8ce8eed2b1eb6f546ba4f9f84cd94e40, type: 3}
-      propertyPath: m_ConnectedAnchor.x
-      value: -4.67
-      objectReference: {fileID: 0}
-    - target: {fileID: 2509645452007543865, guid: 8ce8eed2b1eb6f546ba4f9f84cd94e40, type: 3}
-      propertyPath: m_ConnectedAnchor.y
-      value: -1.4829999
-      objectReference: {fileID: 0}
-    - target: {fileID: 2509645452007543865, guid: 8ce8eed2b1eb6f546ba4f9f84cd94e40, type: 3}
-      propertyPath: m_ConnectedRigidBody
-      value: 
-      objectReference: {fileID: 2793678881701187309}
     - target: {fileID: 4553476741578254904, guid: 8ce8eed2b1eb6f546ba4f9f84cd94e40, type: 3}
       propertyPath: m_Name
       value: Axis_Back
@@ -419,14 +511,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6314650853065250013, guid: 8ce8eed2b1eb6f546ba4f9f84cd94e40, type: 3}
   m_PrefabInstance: {fileID: 6854307308564525717}
   m_PrefabAsset: {fileID: 0}
---- !u!235 &1375364394968011097 stripped
-WheelJoint2D:
-  m_CorrespondingSourceObject: {fileID: 5478948419828704204, guid: 8ce8eed2b1eb6f546ba4f9f84cd94e40, type: 3}
+--- !u!50 &5501549435474082421 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 1388808797903177952, guid: 8ce8eed2b1eb6f546ba4f9f84cd94e40, type: 3}
   m_PrefabInstance: {fileID: 6854307308564525717}
   m_PrefabAsset: {fileID: 0}
---- !u!235 &8273383833628136488 stripped
-WheelJoint2D:
-  m_CorrespondingSourceObject: {fileID: 3301018599992813245, guid: 8ce8eed2b1eb6f546ba4f9f84cd94e40, type: 3}
+--- !u!50 &6374124902019140340 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 534262586389608545, guid: 8ce8eed2b1eb6f546ba4f9f84cd94e40, type: 3}
   m_PrefabInstance: {fileID: 6854307308564525717}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8211858785646076631
@@ -437,14 +529,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5756290203025925652}
     m_Modifications:
-    - target: {fileID: 2509645452007543865, guid: 8ce8eed2b1eb6f546ba4f9f84cd94e40, type: 3}
-      propertyPath: m_ConnectedAnchor.y
-      value: -1.4829999
-      objectReference: {fileID: 0}
-    - target: {fileID: 2509645452007543865, guid: 8ce8eed2b1eb6f546ba4f9f84cd94e40, type: 3}
-      propertyPath: m_ConnectedRigidBody
-      value: 
-      objectReference: {fileID: 2793678881701187309}
     - target: {fileID: 4553476741578254904, guid: 8ce8eed2b1eb6f546ba4f9f84cd94e40, type: 3}
       propertyPath: m_Name
       value: Axis_Front
@@ -499,13 +583,13 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6314650853065250013, guid: 8ce8eed2b1eb6f546ba4f9f84cd94e40, type: 3}
   m_PrefabInstance: {fileID: 8211858785646076631}
   m_PrefabAsset: {fileID: 0}
---- !u!235 &4467360280494014747 stripped
-WheelJoint2D:
-  m_CorrespondingSourceObject: {fileID: 5478948419828704204, guid: 8ce8eed2b1eb6f546ba4f9f84cd94e40, type: 3}
+--- !u!50 &7111298371212421687 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 1388808797903177952, guid: 8ce8eed2b1eb6f546ba4f9f84cd94e40, type: 3}
   m_PrefabInstance: {fileID: 8211858785646076631}
   m_PrefabAsset: {fileID: 0}
---- !u!235 &6645607586963752042 stripped
-WheelJoint2D:
-  m_CorrespondingSourceObject: {fileID: 3301018599992813245, guid: 8ce8eed2b1eb6f546ba4f9f84cd94e40, type: 3}
+--- !u!50 &8546836980880792246 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 534262586389608545, guid: 8ce8eed2b1eb6f546ba4f9f84cd94e40, type: 3}
   m_PrefabInstance: {fileID: 8211858785646076631}
   m_PrefabAsset: {fileID: 0}
